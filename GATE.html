@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="Aiden De La Rosa">
+            <meta name="description" content="This page contains all the things I am learning how to create as I learn HTML.">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GATE Project</title>
+            <link rel="icon" href="School.jpg" type="image/x-icon">
+            <link rel="stylesheet" href="GATE.css" type="text/css">
+            <style>
+                html {font-size: 25px}
+            </style>
+    </head>
+
+        <body>
+            <div class="menu">
+            <br>
+            <h1>
+                <abbr title="Gifted and Talented Education">GATE</abbr> Project
+            </h1>
+            <p>
+                In this <abbr title="Hyper Text Markup Language"><code>HTML</code></abbr> document, I will share how to create a <code>&lt;form&gt;</code> using HTML5.
+            </p>
+
+            <br>
+            <hr>
+<!--TODO: Ask whether or not Ms. Emundson wants me to add actual forms on the page for reference.-->
+            <p class="Jump_to_Section">
+                <strong><em>Jump to section:</em></strong>
+            </p>
+            <nav class="menu">
+                  <a href="#1">Form Element and Attributes</a> <br>
+                  <br>
+                  <a href="#2">Input Element and Attributes</a> <br>
+                  <br>
+                  <a href="#3">Button Element and Attributes</a> <br>
+                  <br>
+                  <a href="#4">Label Element and Attributes</a> <br>
+                  <br>
+                  <a href="#5">Fieldset Element and Attributes</a> <br>
+                  <br>
+                  <a href="#6">Legend Element and Attributes</a> <br>
+                  <br>
+                  <a href="#7">Final Form</a> <br>
+                  <br>
+                  <a href="#8">References</a> <br>
+              </nav>
+
+              <hr>
+
+            <br>
+            <section id="1">
+            <h2>
+                Form Element and Attributes
+            </h2>
+            <p>
+                "The <code>&lt;form&gt;</code> HTML element represents a document section containing interactive controls for submitting information" <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;- <abbr title="Mozilla Developer Network">
+                    <a href= "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">MDN</a>
+                </abbr>
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example:</strong> <code>&lt;form&gt;&lt;/form&gt;</code>
+            </p>
+            <ul>
+                <li><strong>Elements:</strong> The building blocks of code. <br></li>
+                <li><strong>Attributes:</strong> Additional values that can provide information about the elements.</li>
+            </ul>
+            <p>
+                The <code>&lt;action&gt;</code> attribute indicates where form data should be sent. 
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example:</strong> <code>&lt;form action="/submit-url"&gt; &lt;/form&gt;</code>
+            </p>
+        </section>
+
+            <br>
+            <hr>
+            <br>
+
+            <section id="2">
+                <h2>
+                    Input Element and Attributes
+                </h2>
+            <p>
+                The <code>&lt;input&gt;</code> element allows you several ways to collect data from a web form.
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example:</strong> <code>&lt;input&gt;</code> (Input elements are self-closing, so there is no need to add a closing tag) Input elements are nested inside <code>&lt;form&gt;</code> elements.
+            </p>
+            <p>
+                There are many kinds of inputs you can create using the <code>&lt;type&gt;</code> attribute.  You can easily create a password field, reset button, or a control to let users select a file from their computer.
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example:</strong> <code>&lt;input type="text"&gt;</code>
+            </p>
+            <p>
+                In order for a form's data to be accessed by the location specified in the <code>&lt;action&gt;</code> attribute, you must give the text field a <code>&lt;name&gt;</code> attribute and assign it a value to represent the data being submitted. For example, you can use the following syntax for an email address text field.
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example:</strong> <code>&lt;input type="text" name="email"&gt;</code>
+            </p>
+            <p>
+                Placeholder text is used to give people a hint about what kind of information to enter into an input. 
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example:</strong> <code>&lt;input type="text" placeholder="email address"&gt;</code>
+            </p>
+            <p>
+                To prevent a user from submitting your form when required information is mssing, you need to add the <code>&lt;required&gt;</code> attribute to an <code>&lt;input&gt;</code> element. There's no need to set a value to the <code>&lt;required&gt;</code> attribute.
+            </p>
+        </section>
+
+            <br>
+            <hr>
+            <br>
+
+            <section id="3">
+                <h2>
+                    Button Element and Attributes
+                </h2>
+            <p>
+            Use the <code>&lt;button&gt;</code> element to create clickable buttons.
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example:</strong> <code>&lt;button&gt; Click Here &lt;/button&gt;</code> creates the button with the text "Click Here."
+            </p>
+            <aside>
+                <details>
+                    <summary>
+                        <strong><mark>Note</mark></strong>
+                    </summary>
+                        <p>
+                            The default behavior of clicking a form button without any attributes submits the form to the location specified in the form's <code>&lt;action&gt;</code> attribute.
+                        </p>
+                </details>
+            </aside>
+            <br>
+            <aside>
+                <details>
+                    <summary>
+                        <strong><mark>Note</mark></strong>
+                    </summary>
+                        <p>
+                            Both <code>&lt;input&gt;</code> and <code>&lt;button&gt;</code> elements are "inline" elements, which means they don't appear on new lines.
+                        </p>
+                </details>
+            </aside>
+            <p>
+                Although a button will submit by default, relying on this can cause confusion. When using a <code>&lt;button&gt;</code> element, add the <code>&lt;type&gt;</code> attribute with value "submit" to the <code>&lt;button&gt;</code> to make it clear that this is a submit button.
+            </p>
+            <p>
+                You can use radio buttons for questions where you want only one answer out of multiple options. Example of radio button with the option of "cat."
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example:</strong> <code>&lt;input type="radio"&gt; Cat</code>
+            </p>
+            <aside>
+                <details>
+                    <summary>
+                        <strong><mark>Note</mark></strong>
+                    </summary>
+                        <p>
+                            The radio button needs to be written as a new element. Ensure not to add this to the <code>&lt;input&gt;</code> element associated with the "submission" box. 
+                        </p>
+                </details>
+            </aside>
+        </section>
+
+            <br>
+            <hr>
+            <br>
+
+            <section id="4">
+                <h2>
+                    Label Element and Attributes
+                </h2>
+            <p>
+                <code>&lt;Label&gt;</code> elements are used to help associate the text for an <code>&lt;input&gt;</code> element with the <code>&lt;input&gt;</code> element itself (especially for assitive technologies like screen reader).
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example: </strong><code>&lt;label&gt;&lt;input type="radio"&gt;cat&lt;/label&gt;</code> In this example, clicking on the text "cat" will also select the corresponding radio button
+            </p>
+            <p>
+                The <code>&lt;id&gt;</code> attribute is used to identify specific HTML elements. Each <code>&lt;id&gt;</code> attribute's value must be unique from all other <code>&lt;id&gt;</code> values for the entire page. When elements have multiple attributes, the order of the attributes doesn't matter.
+            </p>
+            <p>
+                When there are multiple radio buttons to choose from, you can by default, select more than one. To solve this, add the <code>&lt;name&gt;</code> attribute to both buttons, and give it the same value for both buttons. When this is done, selecting one button will automatically deselect the other.
+            </p>
+            <p>
+                If you select one of the radio buttons, and submit the form, the form data for the button is based on it's <code>&lt;name&gt;</code> and <code>&lt;value&gt;</code> attributes. Since your radio buttons do not have a <code>&lt;value&gt;</code> attribute the form data will include, for example, <code>&lt;indoor-outdoor=on&gt;</code>, which is not useful when you have multiple buttons. To fix this, add a <code>&lt;value&gt;</code> attribute to the radio buttons. For convenience, set the button's <code>&lt;value&gt;</code> attribute to the same value as its <code>&lt;id&gt;</code> attribute.
+            </p>
+        </section>
+
+            <br>
+            <hr>
+            <br>
+
+            <section id="5">
+            <h2>
+                Fieldset Element and Attributes
+            </h2>
+            <p>
+                The <code>&lt;fieldset&gt;</code> element is used to group related inputs and labels together in a web form. <code>&lt;fieldset&gt;</code> elements are <em>block-level elements</em>, meaning that they appear on a new line, versus <em>in-line elements</em>, meaning that they appear on the same line.
+            </p>
+        </section>
+
+            <br>
+            <hr>
+            <br>
+
+            <section id="6">
+                <h2>
+                    Legend Element and Attributes
+                </h2>
+                <p>
+                    The <code>&lt;legend&gt;</code> acts as a caption for the context in the <code>&lt;fieldset&gt;</code> element. It gives users context about what they should enter into that part of the form.
+                </p>
+                <p>
+                    Unlike the <code>&lt;radio&gt;</code> attribute for the <code>&lt;input&gt;</code> element, which only allows one option to be selected, checkboxes are commonly used in forms for questions that may have more than one answer. For example, here's a checkbox with the option of "tacos:"
+                </p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Example:</strong> <code>&lt;input type="checkbox"&gt; tacos</code>
+                </p>
+                <p>
+                    There's another way to associate an <code>&lt;input&gt;</code> element's text with the element itself. You can nest the text within a <code>&lt;label&gt;</code> element and add a <code>&lt;for&gt;</code> attribute with the same value as the <code>&lt;input&gt;</code> element's <code>&lt;id&gt;</code> attribute. When doing this, nest <em>only</em> the <code>&lt;input&gt;</code> element's text in a <code>&lt;label&gt;</code> element.
+                </p>
+                <aside>
+                    <details>
+                        <summary>
+                            <mark>
+                                Note
+                            </mark>
+                        </summary>
+                        Like radio buttons, form data for selected checkboxes are <code>&lt;name&gt;</code> <strong>/</strong> <code>&lt;value&gt;</code> attribute pairs. While the <code>&lt;value&gt;</code> attribute is optional, it's best practice to include it with any ceckboxes or radio buttons on the page.
+                    </details>
+                </aside>
+                <p>
+                    In order to make a checkbox or radio button selected by default, you need to add the <code>&lt;checked&gt;</code> attribute to it. There's no need to set a value to the <code>&lt;checked&gt;</code> attribute. Instead, just add the word "checked" to the <code>&lt;input&gt;</code> element, making sure there is space between it and other attributes.
+                </p>
+            </section>
+
+            <br>
+            <hr>
+            <br>
+        
+            <section id="7">
+            <h2>
+                Final Form
+            </h2>
+            <p>
+                Using all of the elements and attributes presented in the previous "chapters," we can make a functioning form:
+            </p>
+            <form action="https://httpbin.org/get">
+                <input type="text" name="email" placeholder="Comment" required="">
+                <button>Submit</button>
+            </form>
+            </section>
+
+            <section id="8">
+            <h2>
+                References
+            </h2>
+            
+            <ul>
+                <li>
+                    Icon photo by <a href="https://unsplash.com/@joyshotsphotography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Erika Fletcher</a> on <a href="https://unsplash.com/photos/brown-and-white-concrete-building-MZxqc6n9qCw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Mozilla Developer Network</a>
+                </li>
+                <li>
+                    <a href="https://www.bing.com/videos/riverview/relatedvideo?q=dave+gray+html+video&mid=6593FA42F68BD7CECB166593FA42F68BD7CECB16&FORM=VIRE">HTML Full Course for Beginners | Complete All-in-One Tutorial | 4 Hours</a> created by <a href="https://www.youtube.com/c/DaveGrayTeachesCode/playlists">Dave Gray</a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">Free Code Camp</a>
+                </li>
+                <li>
+                    <a href="https://code.visualstudio.com/">Visual Studio Code</a>
+                </li>
+                <li>
+                    <a href="https://validator.w3.org/#validate_by_upload">W3 Validator</a>
+                </li>
+                <li>
+                    Background Photo by <a href="https://unsplash.com/@kochangbok?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Changbok Ko</a> on <a href="https://unsplash.com/photos/black-swivel-chair-beside-rectangular-brown-wooden-desk-F8t2VGnI47I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    
+                </li>
+            </ul>
+        </section>
+        <br>
+        <a href="#">Back to Top</a>
+            </div>
+        </body>
+        </html>

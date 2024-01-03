@@ -1,0 +1,30 @@
+body {
+  background-image: url(Background.jpg);
+}
+h1, h2{
+  font-family: 'Times New Roman', Times, serif;
+}
+a:visited {
+  color: blue;
+}
+a:hover {
+  color: red;
+}
+.menu {
+  background-color: #e2e2e2;
+  padding: 20px;
+  max-width: 800px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav, .Jump_to_Section, h1 {
+  text-align: center;
+}
+code {
+    background-color: #cfcfcf;
+    border-radius: 4px;
+    font-family: courier, monospace;
+    padding: 0 4px;
+  }
+  
